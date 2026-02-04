@@ -14,27 +14,95 @@
     line-height: 1.2;
 }
 
-.response-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     margin-top: 3rem;
+    position: relative;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    display: flex;
     align-items: stretch;
 }
 
 .response-card {
+    width: 100%;
+    min-height: 350px;
     background-color: var(--color-white);
     border-radius: 1.5rem;
     box-shadow: 0 0.5rem 2rem rgba(31, 38, 135, 0.07);
     position: relative;
-    height: 100%;
     border: 1px solid rgba(0, 0, 0, 0.02);
     display: flex;
 }
 
+.carousel-btn {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #60A5FA 100%);
+    color: var(--color-white);
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0.25rem 0.75rem rgba(64, 163, 248, 0.3);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.carousel-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.carousel-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.5rem 1rem rgba(64, 163, 248, 0.4);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: #D1D5DB;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.dot.active {
+    background: linear-gradient(135deg, var(--color-primary) 0%, #60A5FA 100%);
+    width: 2rem;
+    border-radius: 0.375rem;
+}
+
+.dot:hover {
+    background-color: #9CA3AF;
+}
+
 .quote-icon {
     position: absolute;
-    top: -0.75rem;
+    top: 1.5rem;
     right: 2rem;
     color: var(--color-white);
     font-size: 1.5rem;
@@ -69,10 +137,28 @@
     font-size: 1rem;
     line-height: 1.7;
     color: var(--color-secondary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-style: italic;
     font-family: var(--font-secondary);
     flex: 1;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-600);
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    transition: color 0.3s ease;
+}
+
+.expand-btn:hover {
+    color: #60A5FA;
 }
 
 .name {
@@ -100,9 +186,10 @@
         font-size: 2rem;
     }
 
-    .response-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    .carousel-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.75rem;
     }
 }
 
@@ -117,14 +204,23 @@
         margin-bottom: 2rem;
     }
 
-    .response-grid {
-        grid-template-columns: 1fr;
-        gap: 1.25rem;
+    .carousel-container {
+        gap: 0.5rem;
+    }
+
+    .carousel-btn {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.5rem;
+    }
+
+    .response-card {
+        min-height: 300px;
     }
 
     .quote-icon {
-        top: -0.5rem;
-        right: 1.5rem;
+        top: 1rem;
+        right: 1rem;
         font-size: 1.25rem;
         width: 2.25rem;
         height: 2.25rem;
@@ -143,11 +239,29 @@
         font-size: 0.9375rem;
     }
 
+    .expand-btn {
+        font-size: 0.8125rem;
+    }
+
     .name {
         font-size: 1rem;
     }
 
     .nameRole {
         font-size: 0.8125rem;
+    }
+
+    .carousel-dots {
+        gap: 0.5rem;
+        margin-top: 1.5rem;
+    }
+
+    .dot {
+        width: 0.625rem;
+        height: 0.625rem;
+    }
+
+    .dot.active {
+        width: 1.5rem;
     }
 }
