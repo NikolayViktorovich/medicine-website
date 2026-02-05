@@ -49,9 +49,9 @@ export default function Footer() {
                         © {new Date().getFullYear()} Камынина А.В., ИНН 263014283220 — Все права защищены.
                     </div>
                     <div className="footer-docs">
-                        <a href="#">Политика конфиденциальности</a>
-                        <a href="#">Оферта</a>
-                        <a href="#">Согласие на ПД</a>
+                        <a href="/ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ.pdf" download>Политика конфиденциальности</a>
+                        <a href="/ОФЕРТА.pdf" download>Оферта</a>
+                        <a href="/СОГЛАСИЕ НА ПД.pdf" download>Согласие на ПД</a>
                     </div>
                 </div>
             </div>

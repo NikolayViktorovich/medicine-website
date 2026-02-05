@@ -34,6 +34,15 @@
     font-weight: var(--font-weight-500);
 }
 
+.about-subheading{
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-600);
+    color: #1A1A2E;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 .about-list{
     list-style: none;
     margin-top: 2rem;
