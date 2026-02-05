@@ -4,7 +4,7 @@ export default function Header(){
     return(
 
         <header>
-            <h1 className ='logotype'>ЛОР ВРАЧ МСК</h1>
+            <h1 className ='logotype'>Твой-ЛОР Врач</h1>
 
             <ul className ='nav'>
 

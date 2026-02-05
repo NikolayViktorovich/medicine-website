@@ -6,7 +6,7 @@ export default function Footer() {
             <div className="container">
                 <div className="footer-grid">
                     <div className="footer-brand">
-                        <a href="/" className="footer-logo">ЛОР ВРАЧ МСК</a>
+                        <a href="/" className="footer-logo">Твой-ЛОР Врач</a>
                         <p className="footer-description">
                             Камынина Анастасия Викторовна<br />
                             Врач-оториноларинголог<br />
